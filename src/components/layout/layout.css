@@ -1,0 +1,95 @@
+.header,
+.main {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.header__title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.header__button {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  font-size: 20px;
+}
+
+.header__button:hover {
+  background: #e5e7eb;
+}
+
+.header__button:active {
+  background: #d4d4d8;
+}
+
+.main {
+  flex: 1;
+}
+
+.screen {
+  width: 100%;
+}
+
+.screen__back,
+.screen__delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 12px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+}
+
+.screen__back:hover,
+.screen__delete:hover {
+  background: #e5e7eb;
+}
+
+.screen__delete {
+  margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 16px 12px 24px;
+  }
+
+  .header {
+    margin-bottom: 12px;
+  }
+
+  .header__title {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .header__button {
+    min-height: 48px;
+    font-size: 22px;
+  }
+
+  .screen__back,
+  .screen__delete {
+    min-height: 44px;
+    padding: 0 14px;
+  }
+}

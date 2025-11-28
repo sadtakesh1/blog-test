@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog-test</title>
+  </head>
+
+  <body class="app">
+    <!-- хедер -->
+    <header class="header">
+      <h1 class="header__title">Просто блог</h1>
+      <button class="header__button" id="btn-new-post">+</button>
+    </header>
+
+    <main class="main">
+      <!-- ===== экран со списком постов ===== -->
+      <section class="screen screen--list" id="screen-list">
+        <ul class="posts" id="posts-list">
+          <!-- элементы постов добавляются из JS -->
+        </ul>
+      </section>
+
+      <!-- ===== экран создания/редактирования ===== -->
+      <section class="screen screen--edit" id="screen-edit" hidden>
+        <button class="screen__back" id="btn-back-edit">Назад</button>
+
+        <h2 class="form__title" id="form-title">Новый пост</h2>
+
+        <form class="form" id="post-form">
+          <label class="form__field">
+            <span class="form__label">Заголовок</span>
+            <input class="form__input" id="post-title" />
+          </label>
+
+          <label class="form__field">
+            <span class="form__label">Текст</span>
+            <textarea class="form__textarea" id="post-content"></textarea>
+          </label>
+
+          <button class="form__submit" type="submit">Сохранить</button>
+        </form>
+      </section>
+
+      <!-- ===== экран просмотра поста ===== -->
+      <section class="screen screen--view" id="screen-view" hidden>
+        <button class="screen__back" id="btn-back-view">Назад</button>
+        <button class="screen__delete" id="btn-delete-post">Удалить</button>
+
+        <h2 class="view__title" id="view-title"></h2>
+
+        <p class="view__meta">
+          <span class="view__date" id="view-created"></span>
+          <span class="view__date" id="view-updated"></span>
+        </p>
+
+        <div class="view__content" id="view-content"></div>
+
+        <button class="view__edit" id="btn-edit-post">Редактировать</button>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
